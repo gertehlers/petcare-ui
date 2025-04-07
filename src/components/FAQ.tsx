@@ -4,7 +4,7 @@ import { Plus, Minus } from 'lucide-react';
 const faqs = [
   {
     question: 'Can you give medication?',
-    answer: 'Yes, I'm experienced in administering various types of pet medications, including pills, liquids, and injections. We'll discuss your pet's medical needs during our Meet & Greet session.',
+    answer: 'Yes, I`m experienced in administering various types of pet medications, including pills, liquids, and injections. We`ll discuss your pet`s medical needs during our Meet & Greet session.',
   },
   {
     question: 'Do you offer overnight stays?',
@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: 'How will I know how my pet is doing?',
-    answer: 'I provide daily updates including photos and detailed notes about your pet's activities, meals, and overall well-being through text or email, based on your preference.',
+    answer: 'I provide daily updates including photos and detailed notes about your pet`s activities, meals, and overall well-being through text or email, based on your preference.',
   },
 ];
 

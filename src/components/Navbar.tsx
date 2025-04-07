@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { Paw } from 'lucide-react';
+import { Dog  } from 'lucide-react';
 
 const Navbar = () => {
   return (
@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
-            <Paw className="h-8 w-8 text-primary-600" />
+            <Dog className="h-8 w-8 text-primary-600" />
             <span className="ml-2 text-xl font-handwritten font-bold text-primary-800">
               PetCare by Phyllis
             </span>
