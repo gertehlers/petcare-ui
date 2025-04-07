@@ -56,7 +56,7 @@ const HowItWorks = () => {
         <div className="absolute w-16 h-16 -left-16 dog-large">
           <div className="w-full h-full bg-primary-600"
             style={{
-              maskImage: `url("/src/assets/dog.svg")`,
+              maskImage: `url("/assets/dog.svg")`,
               maskRepeat: 'no-repeat',
               maskPosition: 'center',
               maskSize: 'contain',
@@ -67,7 +67,7 @@ const HowItWorks = () => {
         <div className="absolute w-12 h-12 -left-12 dog-medium">
           <div className="w-full h-full bg-primary-600"
             style={{
-              maskImage: `url("/src/assets/dog.svg")`,
+              maskImage: `url("/assets/dog.svg")`,
               maskRepeat: 'no-repeat',
               maskPosition: 'center',
               maskSize: 'contain',
@@ -78,7 +78,7 @@ const HowItWorks = () => {
         <div className="absolute w-10 h-10 -left-10 dog-small">
           <div className="w-full h-full bg-primary-600"
             style={{
-              maskImage: `url("/src/assets/dog.svg")`,
+              maskImage: `url("/assets/dog.svg")`,
               maskRepeat: 'no-repeat',
               maskPosition: 'center',
               maskSize: 'contain',

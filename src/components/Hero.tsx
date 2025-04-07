@@ -3,7 +3,7 @@ import SocialLinks from './SocialLinks';
 
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faPaw } from '@fortawesome/free-solid-svg-icons'
 
 
 const Hero = () => {
@@ -39,8 +39,9 @@ const Hero = () => {
               duration={500}
               className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary-600 hover:bg-primary-700 cursor-pointer transform hover:scale-105 transition-all duration-200"
             >
-              <FontAwesomeIcon icon={faHeart} className="w-5 h-5 mr-2" />
-              Book a Meet & Greet
+              <FontAwesomeIcon icon={faPaw} className="w-5 h-5 mr-4" />
+              Make a booking
+              <FontAwesomeIcon icon={faPaw} className="w-5 h-5 ml-4" />
             </Link>
             <SocialLinks sizeClass='!w-6 !h-6' />
           </div>
