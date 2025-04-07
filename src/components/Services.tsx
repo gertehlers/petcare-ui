@@ -9,12 +9,12 @@ const services = [
   },
   {
     title: 'Dog Walking',
-    description: 'Tailored walking schedules to match your dog`s energy levels and needs. Individual or group walks available.',
+    description: 'Tailored walking schedules to match your dog's energy levels and needs. Individual or group walks available.',
     icon: Dog,
   },
   {
     title: 'Meet & Greet',
-    description: 'A free introduction session to get to know you and your pet. We`ll discuss routines, preferences, and any special care requirements.',
+    description: 'A free introduction session to get to know you and your pet. We'll discuss routines, preferences, and any special care requirements.',
     icon: Heart,
   },
 ];
