@@ -1,0 +1,14 @@
+{
+    "pet-sitting": {
+        "fee": 500,
+        "interval": "day"
+    },
+    "drop-in-visit": {
+        "fee": 100,
+        "interval": "hour"
+    },
+    "drop-in-feed": {
+        "fee": 200,
+        "interval": "hour"
+    }
+}

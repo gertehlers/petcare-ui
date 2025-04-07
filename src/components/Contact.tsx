@@ -1,18 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, Send } from 'lucide-react';
 
 const Contact = () => {
+  const [errors, setErrors] = React.useState({ toDate: '' });
   const [formData, setFormData] = React.useState({
     name: '',
     email: '',
     service: '',
+    fromDate: '',
+    toDate: '',
     message: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Clear previous errors
+    setErrors({ toDate: '' });
+
+    // Validation: Ensure toDate is not before fromDate
+    if (new Date(formData.toDate) < new Date(formData.fromDate)) {
+      setErrors({ toDate: 'End date must be after the start date' });
+      return;
+    }
+
     // TODO: Implement form submission
-    window.location.href = `mailto:phylla.smith@gmail.com?subject=Pet Care Inquiry - ${formData.service}&body=Name: ${formData.name}%0D%0A%0D%0AMessage: ${formData.message}`;
+    // TODO: Implement default wording for the email body
+    window.location.href = `mailto:phylla.smith@gmail.com?subject=Pet Care Inquiry - ${formData.service}
+    &body=Name: ${formData.name}
+    %0D%0A%0D%0AFrom Date: ${formData.fromDate}
+    %0D%0A%0D%0ATo Date: ${formData.toDate}
+    %0D%0A%0D%0AMessage: ${formData.message}`;
   };
 
   return (
@@ -35,7 +53,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                  Name
+                  Name <span className="text-red-500" aria-hidden="true">*</span>
                 </label>
                 <input
                   type="text"
@@ -48,7 +66,7 @@ const Contact = () => {
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Email
+                  Email <span className="text-red-500" aria-hidden="true">*</span>
                 </label>
                 <input
                   type="email"
@@ -65,20 +83,43 @@ const Contact = () => {
                 </label>
                 <select
                   id="service"
-                  required
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                 >
                   <option value="">Select a service</option>
                   <option value="Pet Sitting">Pet Sitting</option>
-                  <option value="Dog Walking">Dog Walking</option>
-                  <option value="Meet & Greet">Meet & Greet</option>
+                  <option value="Drop In Visit">Drop In Visit</option>
+                  <option value="Drop In Feed">Drop In Feed</option>
                 </select>
               </div>
               <div>
+                <label htmlFor="fromDate" className="block text-sm font-medium text-gray-700">
+                  From Date
+                </label>
+                <input
+                  type="date"
+                  id="fromDate"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                  value={formData.fromDate || ''}
+                  onChange={(e) => setFormData({ ...formData, fromDate: e.target.value })}
+                />
+              </div>
+                <div>
+                <label htmlFor="toDate" className="block text-sm font-medium text-gray-700">
+                  {errors.toDate ? (<span className="text-red-500" aria-hidden="true">{errors.toDate}</span>) : ('To Date')}
+                </label>
+                <input
+                  type="date"
+                  id="toDate"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                  value={formData.toDate || ''}
+                  onChange={(e) => setFormData({ ...formData, toDate: e.target.value })}
+                />
+                </div>
+              <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                  Message
+                  Message <span className="text-red-500" aria-hidden="true">*</span>
                 </label>
                 <textarea
                   id="message"
