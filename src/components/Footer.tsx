@@ -1,6 +1,8 @@
 import React from 'react';
+import SocialLinks from './SocialLinks';
+
 import { Link } from 'react-scroll';
-import { Mail, Instagram, Star, LogIn } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -14,7 +16,6 @@ const Footer = () => {
               <Mail className="w-5 h-5 mr-2" />
               <a href="mailto:phylla.smith@gmail.com">phylla.smith@gmail.com</a>
             </div>
-            <p className="mt-4 text-gray-600">Serving the Northern Suburbs of Cape Town</p>
           </div>
 
           {/* Quick Links */}
@@ -42,29 +43,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold text-primary-800 mb-4">Connect With Us</h3>
             <div className="flex space-x-4 mb-6">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary-600 transition-colors"
-              >
-                <Instagram className="w-6 h-6" />
-              </a>
-              <a
-                href="https://google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary-600 transition-colors"
-              >
-                <Star className="w-6 h-6" />
-              </a>
+              <SocialLinks sizeClass='!w-5 !h-5' />
             </div>
             {/* Future Features (Muted) */}
             <div className="space-y-2">
-              <button className="flex items-center text-gray-400 hover:text-primary-400 transition-colors cursor-not-allowed" disabled>
+              {/* <button className="flex items-center text-gray-400 hover:text-primary-400 transition-colors cursor-not-allowed" disabled>
                 <LogIn className="w-4 h-4 mr-2" />
                 <span>Client Login</span>
-              </button>
+              </button> */}
               <div className="text-gray-400 space-x-4 text-sm">
                 <a href="#" className="hover:text-primary-400 cursor-not-allowed">Terms of Service</a>
                 <span>•</span>

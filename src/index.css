@@ -4,17 +4,20 @@
 
 @keyframes run-large {
   0% {
-    transform: translateX(0) scaleX(1);
+    transform: translateX(0) scaleX(-1);
     opacity: 0;
   }
   10% {
     opacity: 1;
   }
   45% {
-    transform: translateX(calc(50vw - 32px)) scaleX(1);
+    transform: translateX(calc(50vw - 32px)) scaleX(-1);
   }
   50% {
-    transform: translateX(50vw) scaleX(-1);
+    transform: translateX(50vw) scaleX(1);
+  }
+  60% {
+    transform: translateX(10vw) scaleX(-1);
   }
   95% {
     transform: translateX(calc(100vw + 64px)) scaleX(-1);
