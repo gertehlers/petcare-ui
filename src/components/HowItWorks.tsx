@@ -54,9 +54,8 @@ const HowItWorks = () => {
       <div ref={animationRef} className="absolute left-0 right-0 h-20">
         {/* Large Dog */}
         <div className="absolute w-16 h-16 -left-16 dog-large">
-          <div className="w-full h-full bg-primary-600/30"
+          <div className="w-full h-full bg-primary-600"
             style={{
-              // maskImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40,60 Q50,70 60,60 Q70,50 80,60 L90,50 L80,40 Q70,30 60,40 Q50,50 40,40 L30,50 L40,60 Z M45,55 L50,55 M65,55 L70,55'/%3E%3C/svg%3E")`,
               maskImage: `url("/src/assets/dog.svg")`,
               maskRepeat: 'no-repeat',
               maskPosition: 'center',
@@ -66,9 +65,8 @@ const HowItWorks = () => {
         </div>
         {/* Medium Dog */}
         <div className="absolute w-12 h-12 -left-12 dog-medium">
-          <div className="w-full h-full bg-primary-600/25"
+          <div className="w-full h-full bg-primary-600"
             style={{
-              // maskImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35,65 Q45,75 55,65 Q65,55 75,65 L85,55 L75,45 Q65,35 55,45 Q45,55 35,45 L25,55 L35,65 Z M40,60 L45,60 M60,60 L65,60'/%3E%3C/svg%3E")`,
               maskImage: `url("/src/assets/dog.svg")`,
               maskRepeat: 'no-repeat',
               maskPosition: 'center',
@@ -78,9 +76,8 @@ const HowItWorks = () => {
         </div>
         {/* Small Dog */}
         <div className="absolute w-10 h-10 -left-10 dog-small">
-          <div className="w-full h-full bg-primary-600/20"
+          <div className="w-full h-full bg-primary-600"
             style={{
-              // maskImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,70 Q40,80 50,70 Q60,60 70,70 L80,60 L70,50 Q60,40 50,50 Q40,60 30,50 L20,60 L30,70 Z M35,65 L40,65 M55,65 L60,65'/%3E%3C/svg%3E")`,
               maskImage: `url("/src/assets/dog.svg")`,
               maskRepeat: 'no-repeat',
               maskPosition: 'center',
