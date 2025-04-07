@@ -1,5 +1,4 @@
-import React from 'react';
-import { Dog, Home, Heart, Clock } from 'lucide-react';
+import { Dog, Home, Heart } from 'lucide-react';
 
 const services = [
   {

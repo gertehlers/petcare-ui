@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Calendar, UserCheck, Heart, CheckCircle } from 'lucide-react';
 
 const steps = [

@@ -1,9 +1,8 @@
-import React from 'react';
 import SocialLinks from './SocialLinks';
 
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faPaw } from '@fortawesome/free-solid-svg-icons'
+import { faPaw } from '@fortawesome/free-solid-svg-icons'
 
 
 const Hero = () => {
