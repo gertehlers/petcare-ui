@@ -60,11 +60,19 @@ const emergency = [
     url: 'tel:+27215550000',
   },
   {
-    title: 'Pet Poison Helpline',
-    description: 'Immediate assistance for suspected poisoning',
+    // For poison-related emergencies, contact the Poisons Information Helpline of the Western Cape at 0861 555 777 
+    title: 'Poisons Information Helpline of the Western Cape (PIHWC)',
+    description: 'For 24/7 poison-related emergencies: +27 861 555 777',
     icon: Phone,
-    url: 'tel:+27215550001',
+    phone: 'tel:+27861555777',
+    url: 'https://d7.westerncape.gov.za/service/poisons-information-helpline-western-cape',
   },
+  {
+    title: 'The Cape of Good Hope SPCA',
+    description: 'Animal welfare concerns: +27 21 700 4140',
+    icon: Phone,
+    url: 'tel:+27217004140',
+  }
 ];
 
 const Resources = () => {
@@ -105,7 +113,7 @@ const Resources = () => {
         </div>
 
         {/* Pet Care Guides */}
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <h3 className="text-2xl font-handwritten font-bold text-primary-700 mb-6">
             Pet Care Guides
           </h3>
@@ -131,10 +139,10 @@ const Resources = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* Video Resources */}
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <h3 className="text-2xl font-handwritten font-bold text-primary-700 mb-6">
             Educational Videos
           </h3>
@@ -162,7 +170,7 @@ const Resources = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* Emergency Contacts */}
         <div>
@@ -198,3 +206,6 @@ const Resources = () => {
 };
 
 export default Resources;
+
+
+// . . In case of medical emergencies, dial 10177 for ambulance services . Additionally, the National Sea Rescue Institute (NSRI) can be contacted at 087 094 9774 for water-related incidents .

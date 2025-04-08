@@ -21,13 +21,15 @@ const Hero = () => {
       <div className="absolute inset-0 md:hidden bg-gradient-to-b from-primary-50 to-white" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-      <div className="text-center max-w-3xl mx-auto">
+      <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-2xl md:text-4xl font-handwritten text-primary-800 mb-6">
+            Welcome to
+          </h1>
           <h1 className="text-4xl md:text-6xl font-handwritten font-bold text-primary-800 mb-6">
-            Welcome to PetCare by Phyllis
+            PetCare by Phyllis
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 font-handwritten">
-            Caring for your pets like they're family <br/>
-            - in the comfort of their own home -
+            Loving care when you're not there 🐾❤️
           </p>
           <div className="flex flex-col items-center gap-4 mb-12">
             <Link

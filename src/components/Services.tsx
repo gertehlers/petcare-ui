@@ -57,13 +57,17 @@ const Services = () => {
                 </p>
                 <div className="mt-auto text-right">
                   <p className='text-gray-400'>
-                  {service.fee === 0 ? 'Free' : `R${service.fee} per ${service.interval}`}
+                    <span className="text-gray-400 text-xs align-top">*</span>{' '}
+                    {service.fee === 0 ? 'Free' : `R${service.fee} per ${service.interval}`}
                   </p>
                 </div>
               </div>
             );
           })}
         </div>
+        <p className="text-sm text-gray-500 mt-8 text-center">
+          * The fees listed above are indicative and subject to change. Final pricing will be determined and agreed upon during the Meet & Greet session and outlined in the service contract.
+        </p>
       </div>
     </section>
   );

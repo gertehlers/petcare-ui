@@ -6,9 +6,9 @@ const Contact = () => {
   const [formData, setFormData] = React.useState({
     name: '',
     email: '',
-    service: '',
-    fromDate: '',
-    toDate: '',
+    service: 'General Enquiry',
+    fromDate:  new Date().toISOString().split('T')[0],
+    toDate: new Date().toISOString().split('T')[0],
     message: '',
   });
 
@@ -26,11 +26,11 @@ const Contact = () => {
 
     // TODO: Implement form submission
     // TODO: Implement default wording for the email body
-    window.location.href = `mailto:phylla.smith@gmail.com?subject=Pet Care Inquiry - ${formData.service}
+    window.location.href = `mailto:phylla.smith@gmail.com?subject=Pet Care - ${formData.name} - ${formData.service}
     &body=Name: ${formData.name}
     %0D%0A%0D%0AFrom Date: ${formData.fromDate}
     %0D%0A%0D%0ATo Date: ${formData.toDate}
-    %0D%0A%0D%0AMessage: ${formData.message}`;
+    %0D%0A%0D%0A${formData.message}`;
   };
 
   return (
@@ -64,7 +64,7 @@ const Contact = () => {
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
               </div>
-              <div>
+              {/* <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                   Email <span className="text-red-500" aria-hidden="true">*</span>
                 </label>
@@ -76,7 +76,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
-              </div>
+              </div> */}
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700">
                   Service Type
@@ -87,36 +87,41 @@ const Contact = () => {
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                 >
-                  <option value="">Select a service</option>
-                  <option value="Pet Sitting">Pet Sitting</option>
-                  <option value="Drop In Visit">Drop In Visit</option>
-                  <option value="Drop In Feed">Drop In Feed</option>
+                  <option value="General Enquiry">General Enquiry</option>
+                  <option value="Pet Sitting Enquiry">Pet Sitting</option>
+                  <option value="Drop In Visits Enquiry">Drop In Visits</option>
+                  <option value="Drop In Feeds Enquiry">Drop In Feeds</option>
                 </select>
               </div>
               <div>
-                <label htmlFor="fromDate" className="block text-sm font-medium text-gray-700">
-                  From Date
-                </label>
-                <input
-                  type="date"
-                  id="fromDate"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
-                  value={formData.fromDate || ''}
-                  onChange={(e) => setFormData({ ...formData, fromDate: e.target.value })}
-                />
-              </div>
-                <div>
-                <label htmlFor="toDate" className="block text-sm font-medium text-gray-700">
-                  {errors.toDate ? (<span className="text-red-500" aria-hidden="true">{errors.toDate}</span>) : ('To Date')}
-                </label>
-                <input
-                  type="date"
-                  id="toDate"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
-                  value={formData.toDate || ''}
-                  onChange={(e) => setFormData({ ...formData, toDate: e.target.value })}
-                />
+                <div className="flex space-x-4">
+                  <div className="flex-1">
+                    <label htmlFor="fromDate" className="block text-sm font-medium text-gray-700">
+                      From
+                    </label>
+                    
+                    <input
+                      type="date"
+                      id="fromDate"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                      value={formData.fromDate}
+                      onChange={(e) => setFormData({ ...formData, fromDate: e.target.value })}
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <label htmlFor="toDate" className="block text-sm font-medium text-gray-700">
+                      {errors.toDate ? (<span className="text-red-500" aria-hidden="true">{errors.toDate}</span>) : ('To')}
+                    </label>
+                    <input
+                      type="date"
+                      id="toDate"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                      value={formData.toDate || ''}
+                      onChange={(e) => setFormData({ ...formData, toDate: e.target.value })}
+                    />
+                  </div>
                 </div>
+              </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                   Message <span className="text-red-500" aria-hidden="true">*</span>
